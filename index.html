@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>شهر من الحب 💙💜</title>
+<title>شهرنا الأول 💙💜</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -27,46 +27,58 @@ body {
 
 .container {
   background: rgba(255,255,255,0.12);
-  padding: 40px;
+  padding: 35px;
   border-radius: 25px;
   text-align: center;
-  max-width: 400px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
   animation: fadeIn 2s ease;
 }
 
+/* صورة */
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
 h1 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 20px;
-  margin-bottom: 25px;
+  font-size: 18px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
 .heart {
-  font-size: 50px;
+  font-size: 45px;
+  margin: 15px 0;
   animation: beat 1.2s infinite;
-  margin: 20px 0;
 }
 
 .footer {
-  margin-top: 25px;
+  margin-top: 20px;
   font-size: 14px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* Animations */
 @keyframes beat {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  50% { transform: scale(1.25); }
 }
 
 @keyframes fadeIn {
@@ -74,10 +86,10 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Floating hearts */
+/* قلوب طائرة */
 .heart-float {
   position: absolute;
-  bottom: -50px;
+  bottom: -40px;
   font-size: 20px;
   animation: floatUp 6s linear infinite;
   opacity: 0.7;
@@ -85,11 +97,11 @@ p {
 
 @keyframes floatUp {
   from {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0);
     opacity: 0.8;
   }
   to {
-    transform: translateY(-120vh) translateX(50px);
+    transform: translateY(-120vh);
     opacity: 0;
   }
 }
@@ -99,6 +111,10 @@ p {
 <body>
 
 <div class="container">
+
+  <!-- 🔽 الصورة باسم الجديد -->
+  <img src="IMG_20251231_015357_276.jpg" class="photo" alt="صورتنا">
+
   <h1>💙💜 شهر من الحب 💜💙</h1>
   <h2>إلى أجمل إنسانة في حياتي</h2>
 
@@ -106,19 +122,19 @@ p {
 
   <p>
     مرّ شهر واحد،  
-    لكنه كان مليئًا بالحب،  
-    بالضحك، وبأجمل اللحظات.  
+    لكنه كان مليئًا بالمشاعر الجميلة،  
+    وباللحظات اللي غادي نبقاو نضحكو عليها.  
     <br><br>
-    شكراً لأنك في حياتي،  
-    وشكراً لأنك أنتِ 💕
+    شكراً لأنك جزء من حياتي،  
+    وأنا ممتن لكل لحظة معك 💕
   </p>
 
   <div class="footer">
-    مع كل الحب ✨
+    مع كل الحب 🌙✨
   </div>
+
 </div>
 
-<!-- Floating hearts -->
 <script>
 function createHeart() {
   const heart = document.createElement("div");

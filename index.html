@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>موقعي الأول</title>
+<meta charset="UTF-8">
+<title>شهر من الحب 💙💜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #6a11cb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  background: rgba(255,255,255,0.12);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.heart {
+  font-size: 50px;
+  animation: beat 1.2s infinite;
+  margin: 20px 0;
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating hearts */
+.heart-float {
+  position: absolute;
+  bottom: -50px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(-120vh) translateX(50px);
+    opacity: 0;
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>مرحبا بكم في موقعي</h1>
-  <p>هذا موقع منشور باستعمال GitHub Pages</p>
+
+<div class="container">
+  <h1>💙💜 شهر من الحب 💜💙</h1>
+  <h2>إلى أجمل إنسانة في حياتي</h2>
+
+  <div class="heart">❤️</div>
+
+  <p>
+    مرّ شهر واحد،  
+    لكنه كان مليئًا بالحب،  
+    بالضحك، وبأجمل اللحظات.  
+    <br><br>
+    شكراً لأنك في حياتي،  
+    وشكراً لأنك أنتِ 💕
+  </p>
+
+  <div class="footer">
+    مع كل الحب ✨
+  </div>
+</div>
+
+<!-- Floating hearts -->
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart-float");
+  heart.innerHTML = "💜";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
 </body>
 </html>
